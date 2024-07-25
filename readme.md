@@ -132,7 +132,7 @@ You can add multiple JSON files to the folder specified in the **input_path**. T
 
 To test the project with new files, simply place the new JSON files into the directory specified in **input_path**. The project will automatically include these files in its next run, extracting the necessary data and saving it to the output path specified.
 
-### Running the `setup.sh` Script
+### Running the `run.sh` Script
 
 1. Open a Git Bash terminal.
 2. Grant execution permissions to the `.sh` file with the command `chmod +x run.sh`.
