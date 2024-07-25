@@ -23,11 +23,36 @@ The goal is to develop a Python script that extracts specific fields from JSON f
 
 ## Solution strategy
 
+### Inductive thinking
 
+**Project requirements**  
+
+* The **input** for the project is a **path** to a JSON file.
+* The data we need to extract is **located on the first page** of the document. Due to proximity, it is possible that the search criteria will be found in the first occurrence within the JSON file.
+* The JSON files used for the project **have the same structure and arrangement** of the required fields 
+
+Given the project requirements, the approach involves simulating a human search using "Control + F" for keywords within the file. This strategy aims to identify and extract relevant data by locating specific keywords in the initial part of the JSON file.
+
+![key search criteria](resources\control_f.png)
+
+To achieve this, it is necessary to analyze the JSON structure to locate the data. 
+
+### JSON structure
+
+The provided JSON is structured into two  main parts:
+
+* **DocumentMetadata**, which provides general information about the document
+* **Blocks**, which contains a list of text blocks and other structures within the document. Each block has a **type** and may contain **text**, geometry, and relationships with other blocks.
+
+Each block can have different types. Blocks of type **'LINE'** contain the text that needs to be extracted. Therefore, each BlockType is represented as a dictionary with key-value pairs, where **'Text'** is the key used to iterate through the lines and locate the search criteria 
+
+### Generalize strategy
+
+With the JSON structure in mind, it is proposed to develop a program that iterates through each BlockType of type LINE and, based on a search criterion provided by observing the required field in the file, accesses the value in the text string 
 
 ## Technical solution
 
-
+### Code diagram
 
 ## Project structure
 
