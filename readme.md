@@ -61,11 +61,11 @@ This project focuses on extracting key information from property certificate doc
 ### Data Extraction Workflow
 ![workflowm](resources/workflow.png)
 
-```
+
 💡 This project has the capability to read the number of .json files within a folder and extract data from each one. For each file it reads, it adds a record to the final dataframe.
 
 Therefore, it is important to configure the `input_path` in the environment variables with the folder where the OCR JSON files will be stored.
-```
+
 
 ### Code Diagram
 
@@ -111,3 +111,29 @@ Therefore, it is important to configure the `input_path` in the environment vari
 ```
 
 ## Configuration
+
+### Ensure Prerequisites
+
+Make sure you have the following installed on your system:
+```
+- Python 3
+- Pip (Python package installer)
+```
+
+### Clone the Repository
+
+If you haven't already, download or clone the repository to your local machine.
+
+### Set up env vars 
+To configure the project, you need to set up environment variablesin `.env` file in the root directory of your project. This file should contain the paths for reading input files and saving output data. 
+
+### Add data 
+You can add multiple JSON files to the folder specified in the **input_path**. The project is designed to read all JSON files in this directory and extract data from each one, adding a record to the final DataFrame for every file processed.
+
+To test the project with new files, simply place the new JSON files into the directory specified in **input_path**. The project will automatically include these files in its next run, extracting the necessary data and saving it to the output path specified.
+
+### Running the `setup.sh` Script
+
+1. Open a Git Bash terminal.
+2. Grant execution permissions to the `.sh` file with the command `chmod +x run.sh`.
+3. Run the `.sh` file with the command `./run.sh`.
