@@ -8,7 +8,14 @@ Contents:
 - month_encoding: A dictionary for encoding month names into their corresponding numeric values.
 """
 
-
+numero_de_matricula = None
+fecha_de_impresion = None
+departamento = None
+municipio = None
+vereda = None
+estado_del_folio = None
+estado_folio_bool = False
+    
 month_encoding = {
                 'enero': '01', 
                 'febrero': '02', 
@@ -23,3 +30,12 @@ month_encoding = {
                 'noviembre': '11', 
                 'diciembre': '12'
                 }
+
+extracted_data = {
+            'Numero_de_matricula': numero_de_matricula,
+            'Fecha_de_impresion': fecha_de_impresion,
+            'Departamento': departamento,
+            'Municipio': municipio,
+            'Vereda': vereda,
+            'Estado_de_folio': estado_del_folio  
+        }
